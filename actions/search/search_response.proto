@@ -1,0 +1,52 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/search";
+
+message SearchResponse {
+  User user = 1;
+  repeated uint32 personalized_place_ids = 5;
+  map<uint32, Restriction> restrictions = 2;
+  map<uint32, Place> places = 3;
+  map<uint32, Comment> comments = 4;
+}
+
+message User {
+  string id = 1;
+  string username = 2;
+  repeated uint32 restriction_ids = 3;
+}
+
+message Restriction {
+  uint32 id = 1;
+  string name = 2;
+}
+
+message Place {
+  uint32 id = 1;
+  string supplier_id = 2;
+  repeated uint32 restriction_ids = 3;
+  repeated uint32 comment_ids = 4;
+
+  uint32 personal_rating = 5;
+  uint32 personal_rating_count = 6;
+  uint32 rating = 7;
+  uint32 rating_count = 8;
+  bool is_perfect_match = 9;
+}
+
+message MenuItem {
+  uint32 id = 1;
+  string name = 2;
+  repeated uint32 restriction_ids = 3;
+  repeated uint32 matching_restriction_ids = 4;
+}
+
+message Comment {
+  uint32 id = 1;
+  uint32 rating = 2;
+  bool isPersonal = 3;
+  string text = 4;
+  string creation_date = 5;
+  string username = 6;
+}

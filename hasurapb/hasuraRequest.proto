@@ -1,0 +1,18 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/hasurapb";
+
+message HasuraRequestHeaders {
+  string Authorization = 1;
+  string Host = 2;
+  string Origin = 3;
+  string Referer = 4;
+  string Accept = 5;
+  string Connection = 6;
+  string DNT = 7;
+}
+
+message HasuraRequest {
+  HasuraRequestHeaders headers = 1;
+}

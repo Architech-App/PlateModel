@@ -1,0 +1,31 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/nearby";
+
+message NearbyInput {
+  string user_id = 1;
+}
+
+message NearbyUser {
+  string id = 1;
+  repeated NearbyUserRestrictions user_restrictions = 2;
+}
+
+message NearbyUserRestrictions {
+  uint32 restriction_id = 1;
+}
+
+message NearbyOutputData {
+  NearbyOutput data = 1;
+}
+
+message NearbyOutput {
+  repeated PlaceRestriction place_restriction = 1;
+  NearbyUser user_by_pk = 2;
+}
+
+message PlaceRestriction {
+  uint32 place_id = 1;
+  uint32 restriction_id = 2;
+}
