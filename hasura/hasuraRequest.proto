@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "/hasurapb";
+option go_package = "/hasura";
 
 message HasuraRequestHeaders {
   string Authorization = 1;
