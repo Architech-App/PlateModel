@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "/canny";
+option go_package = "github.com/Architech-App/PlateModel/canny";
 
 message CannyResponse {
   string sso_token = 1;

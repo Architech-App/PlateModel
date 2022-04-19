@@ -1,0 +1,13 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "github.com/Architech-App/PlateModel/user";
+
+import "restriction/restriction.proto";
+
+message UserDB {
+  string id = 1;
+  string username = 2;
+  repeated WrapRestrictions user_restrictions = 3;
+}
+

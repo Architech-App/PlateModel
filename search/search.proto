@@ -1,0 +1,31 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "github.com/Architech-App/PlateModel/search";
+
+import "user/user.proto";
+import "place/place.proto";
+
+message SearchInput {
+  SearchInput_Input input = 1;
+}
+
+message SearchInput_Input {
+  string user_id = 1 [json_name = "user_id"];
+  repeated uint32 place_ids = 2 [json_name = "place_ids"];
+}
+
+message SearchValue {
+  string query = 1;
+  SearchInput_Input variables = 2;
+}
+
+message SearchOutputData {
+  SearchOutput data = 1;
+}
+
+message SearchOutput {
+  UserDB user_by_pk = 1;
+  repeated PlaceDB place = 2;
+}
+
