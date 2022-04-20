@@ -1,0 +1,17 @@
+syntax = "proto3";
+package protobuf;
+
+import "restriction/restriction.proto";
+
+option go_package = "github.com/Architech-App/PlateModel/menu_item";
+
+message MenuItemDB {
+  uint32 id = 1;
+  string name = 2;
+  repeated WrapRestrictions menu_item_restrictions = 3;
+}
+
+message WrapMenuItems {
+  MenuItemDB menu_item = 1;
+}
+

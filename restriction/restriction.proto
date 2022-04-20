@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "github.com/Architech-App/PlateModel/restriction";
+
+message RestrictionDB {
+  uint32 id = 1;
+  string name = 2;
+}
+
+message WrapRestrictions {
+  RestrictionDB restriction = 1;
+}
+

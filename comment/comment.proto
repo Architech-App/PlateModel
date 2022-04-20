@@ -1,0 +1,21 @@
+syntax = "proto3";
+package protobuf;
+
+import "user/user.proto";
+import "menu_item/menu_item.proto";
+
+option go_package = "github.com/Architech-App/PlateModel/comment";
+
+message CommentDB {
+  uint32 id = 1;
+  uint32 rating = 2;
+  string text = 3;
+  string creation_date = 4;
+  UserDB user = 5;
+  repeated WrapMenuItems comment_menu_items = 6;
+}
+
+message WrapComment {
+  CommentDB comment = 1;
+}
+

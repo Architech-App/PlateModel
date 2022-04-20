@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "/nearby";
+option go_package = "github.com/Architech-App/PlateModel/nearby";
 
 message NearbyInput {
   string user_id = 1;

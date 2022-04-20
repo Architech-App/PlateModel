@@ -1,0 +1,15 @@
+syntax = "proto3";
+package protobuf;
+
+import "restriction/restriction.proto";
+import "comment/comment.proto";
+
+option go_package = "github.com/Architech-App/PlateModel/place";
+
+message PlaceDB {
+  uint32 id = 1;
+  string foursquare_id = 2;
+  repeated WrapRestrictions place_restrictions = 3;
+  repeated WrapComment place_comments = 4;
+}
+
