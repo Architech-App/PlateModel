@@ -4,7 +4,7 @@ package protobuf;
 import "user/user.proto";
 import "menu_item/menu_item.proto";
 
-option go_package = "github.com/Architech-App/PlateModel/comment";
+option go_package = "/model";
 
 message CommentDB {
   uint32 id = 1;

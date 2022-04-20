@@ -4,7 +4,7 @@ package protobuf;
 import "restriction/restriction.proto";
 import "comment/comment.proto";
 
-option go_package = "github.com/Architech-App/PlateModel/place";
+option go_package = "/model";
 
 message PlaceDB {
   uint32 id = 1;

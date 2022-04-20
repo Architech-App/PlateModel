@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "github.com/Architech-App/PlateModel/search";
+option go_package = "/model";
 
 import "user/user.proto";
 import "place/place.proto";

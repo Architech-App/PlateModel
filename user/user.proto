@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "github.com/Architech-App/PlateModel/user";
+option go_package = "/model";
 
 import "restriction/restriction.proto";
 
