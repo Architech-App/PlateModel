@@ -1,0 +1,25 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/model";
+
+message PhotoRequest {
+  repeated string supplier_ids = 1;
+  uint32 limit = 2;
+}
+
+message PhotoResponse {
+  repeated string supplier_ids = 1; 
+  map<string, Photos> photos = 2;
+}
+
+message Photos {
+  string supplier_id = 1;
+  repeated Photo photos = 2;
+}
+
+message Photo {
+  string id = 1;
+  string url = 2;
+  repeated string classifications = 3;
+}
