@@ -1,0 +1,19 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/foursquare";
+
+message PhotoRequest {
+  string supplier_id = 1;
+  uint32 limit = 2;
+}
+
+message PhotoResponse {
+  repeated Photo photos = 1;
+}
+
+message Photo {
+  string id = 1;
+  string url = 2;
+  repeated string classifications = 3;
+}
