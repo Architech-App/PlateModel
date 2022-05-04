@@ -1,0 +1,34 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = "/model";
+
+message SupplierPlaceRequest {
+  string id = 1;
+}
+
+message SupplierPlaceResponse {
+  PlaceResponse response = 1;
+}
+
+message PlaceResponse {
+  string name = 1;
+  string description = 2;
+  string url = 3;
+  uint32 rating = 4;
+  Location location = 5;
+}
+
+message Location {
+  string address = 1;
+  string city = 2;
+  string postal_code = 3;
+  string state = 4;
+
+  float distance = 5;
+  float latitude = 6;
+  float longitude = 7;
+
+  string country = 8;
+}
+
