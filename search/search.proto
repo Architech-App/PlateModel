@@ -1,10 +1,10 @@
 syntax = "proto3";
 package protobuf;
 
-option go_package = "/model";
-
-import "user/user.proto";
 import "place/place.proto";
+import "user/user.proto";
+
+option go_package = "/model";
 
 message SearchInput {
   SearchInput_Input input = 1;

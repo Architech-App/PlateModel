@@ -1,6 +1,8 @@
 syntax = "proto3";
 package protobuf;
 
+import "place/supplier_place.proto";
+
 option go_package = "/model";
 
 message SearchResponse {
@@ -33,6 +35,7 @@ message Place {
   uint32 rating = 7;
   uint32 rating_count = 8;
   bool is_perfect_match = 9;
+  PlaceMetadata metadata = 10;
 }
 
 message MenuItem {
