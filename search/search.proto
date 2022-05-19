@@ -2,6 +2,7 @@ syntax = "proto3";
 package protobuf;
 
 import "place/place.proto";
+import "place/supplier_place.proto";
 import "user/user.proto";
 
 option go_package = "/model";
@@ -12,7 +13,8 @@ message SearchInput {
 
 message SearchInput_Input {
   string user_id = 1 [json_name = "user_id"];
-  repeated uint32 place_ids = 2 [json_name = "place_ids"];
+  Coordinate coordinate = 2;
+  repeated uint32 place_ids = 3 [json_name = "place_ids"];
 }
 
 message SearchValue {
