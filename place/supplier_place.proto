@@ -43,7 +43,7 @@ message Coordinate {
 }
 
 message Price {
-  string tier = 1;
+  uint32 tier = 1;
 }
 
 message PlaceStatus {
