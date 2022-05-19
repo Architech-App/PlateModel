@@ -19,6 +19,9 @@ message PlaceMetadata {
   uint32 rating = 4;
   Location location = 5;
   repeated string categories = 6;
+  Contact contact = 7;
+  PlaceStatus status = 8;
+  Price price = 9;
 }
 
 message Location {
