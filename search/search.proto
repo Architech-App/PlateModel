@@ -2,12 +2,14 @@ syntax = "proto3";
 package protobuf;
 
 import "place/place.proto";
+import "place/supplier_place.proto";
 import "user/user.proto";
 
 option go_package = "/model";
 
 message SearchInput {
   SearchInput_Input input = 1;
+  Coordinate coordinate = 2;
 }
 
 message SearchInput_Input {

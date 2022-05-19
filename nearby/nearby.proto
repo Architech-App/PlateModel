@@ -1,9 +1,20 @@
 syntax = "proto3";
 package protobuf;
 
+import "place/supplier_place.proto";
+
 option go_package = "/model";
 
 message NearbyInput {
+  string user_id = 1;
+}
+
+message NearbyRequest {
+  NearbyRequestDB db = 1;
+  Coordinate coordinate = 2;
+}
+
+message NearbyRequestDB {
   string user_id = 1;
 }
 
