@@ -5,18 +5,20 @@ option go_package = "/model";
 
 message SupplierPlaceRequest {
   string id = 1;
+  Coordinate coordinate = 2;
 }
 
 message SupplierPlaceResponse {
-  PlaceResponse response = 1;
+  PlaceMetadata metadata = 1;
 }
 
-message PlaceResponse {
+message PlaceMetadata {
   string name = 1;
   string description = 2;
   string url = 3;
   uint32 rating = 4;
   Location location = 5;
+  repeated string categories = 6;
 }
 
 message Location {
@@ -26,9 +28,29 @@ message Location {
   string state = 4;
 
   float distance = 5;
-  float latitude = 6;
-  float longitude = 7;
+  Coordinate coordinate = 6;
 
-  string country = 8;
+  string country = 7;
+  string formatted_address = 8;
 }
 
+message Coordinate {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message Price {
+  string tier = 1;
+}
+
+message PlaceStatus {
+  string status = 1;
+  bool is_open = 2;
+}
+
+message Contact {
+  string phone = 1;
+  string twitter = 2;
+  string instagram = 3;
+  string facebook = 4;
+}
