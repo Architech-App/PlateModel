@@ -39,4 +39,6 @@ message NearbyOutput {
 message PlaceRestriction {
   uint32 place_id = 1;
   uint32 restriction_id = 2;
+  Coordinate place = 3;
 }
+
